@@ -1,9 +1,12 @@
-# result = 9
-# a = str(result)
-# print(type(a))
+# repalce prac
 
-a = input("put a number like 1: ")
-b = input("put a number like 2: ")
+letter = '''hii |name| you are 
+seleted for developer position on |date|'''
 
-print("input value of a is:" , a)
-print("input value of b is:" , b)
+print(letter.replace("|name|", "Astick").replace("|date|", "23 september"))
+
+# detect double space
+
+progr = "Hii I am astick I am here to learn python"
+
+print(progr.find("  "))
