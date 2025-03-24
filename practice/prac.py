@@ -375,14 +375,23 @@
 #         print("The word 'Python' is not present in the file")
 
 
-with open("log.txt") as f:
-    lines = f.readlines()
+# with open("log.txt") as f:
+#     lines = f.readlines()
 
-lineNo = 1
-for line in lines:
-    if "python" in line:
-        print(f"The word 'Python' is present in the file and is available in line no: {lineNo}")
-        break
-    lineNo += 1
-else:
-    print("The word 'Python' is not present in the file")
+# lineNo = 1
+# for line in lines:
+#     if "python" in line:
+#         print(f"The word 'Python' is present in the file and is available in line no: {lineNo}")
+#         break
+#     lineNo += 1
+# else:
+#     print("The word 'Python' is not present in the file")
+
+
+class employee():
+    salary = 1234000
+    language = "English"  #class attribute
+
+astick = employee()
+astick.name = "harry" #instance atribute
+print(astick.salary, astick.language, astick.name)
