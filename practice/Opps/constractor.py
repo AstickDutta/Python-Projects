@@ -12,7 +12,7 @@ class employee():
     #     print(f"Employee's salary is {self.salary}, language is {self.language}")
     # @staticmethod
     # def greet():
-    #     print("Hello, I am an employee!")
+    #     print("Hello, I am an employee!").
 
 astick = employee("xyz", 123401, "Python") # this is instance atribute
 print(astick.name, astick.salary, astick.language)
