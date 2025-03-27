@@ -396,17 +396,59 @@
 # astick.name = "harry" #instance atribute
 # print(astick.salary, astick.language, astick.name)
 
-class employee():
-    salary = 1234000
-    language = "English"  #this is class attribute
+# class programmer:
+#     company = "Microsoft"
 
-    def getInfo(self):
-        print(f"Employee's salary is {self.salary}, language is {self.language}")
-    @staticmethod
-    def greet():
-        print("Hello, I am an employee!")
+#     def __init__(self, name, salary, pincode):
+#         self.name = name
+#         self.salary = salary
+#         self.pincode = pincode
 
-astick = employee() # this is instance atribute
+# p = programmer("Astick", 1234000, 894749)
 
-astick.getInfo()
-astick.greet()
+# print(p.name, p.company, p.salary, p.pincode)
+
+# class claculator:
+#     def __init__(self, n):
+#         self.n = n
+        
+#     def square(self):
+#         print(f"the square of given number is {self.n * self.n}")
+
+#     def cube(self):
+#         print(f"the cube of given number is {self.n * self.n * self.n}")
+
+#     def root(self):
+#         print(f"the root of given number is {self.n ** 1/2}")
+
+#     @staticmethod
+#     def greet():
+#         print("Hii there")
+
+# a = claculator(4)
+
+# a.greet()
+# a.square()
+# a.cube()
+# a.root()
+
+# from random import randint
+
+# class train:
+#     def __init__(self, trainNo):
+#         self.trainNo = trainNo
+    
+#     def book(self, fro, to):
+#         print(f"ticket is booked in train number: {self.trainNo} from {fro} to {to}")
+
+#     def getStatus(self):
+#         print(f"train number {self.trainNo} in running on time")
+
+#     def getFare(self, fro, to):
+#         print(f"Ticket fare in train number: {self.trainNo} from {fro} to {to} is {randint(222, 555)}")
+
+
+# t = train(1234)
+# t.book("Durgapur", "Kolkata")
+# t.getStatus()
+t.getFare("Durgapur", "Kolkata")
