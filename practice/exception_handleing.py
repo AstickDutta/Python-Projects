@@ -29,8 +29,8 @@
 #         file.close()
 
 try:
-    a = int(input("Enter your 1st number: "))
-    b = int(input("Enter your 2nd number: "))
+    a = int(input("Enter your first number: "))
+    b = int(input("Enter your second number: "))
 
     if b == 0:
         raise ZeroDivisionError("You can't divide a number by 0")
