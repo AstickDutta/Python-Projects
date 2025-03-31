@@ -1,9 +1,9 @@
 a = 78
 
-def fun():
+def func():
     global a
     a = 4
     print(a)
 
-fun()
+func()
 print(a)
