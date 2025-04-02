@@ -531,3 +531,66 @@ try:
     print(a)
 except Exception as e:
     print(e)
+
+
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello, World!")
+
+say_hello()
+
+age = 79
+discount = 5 if age < 65 else 10
+
+print(discount)
+
+
+for i in range(10):
+    if i == 7:
+        break
+    print(i , end=",")
+    
+for i in range(10):
+    if i == 7:
+        continue
+    print(i , end = ",")
+
+def myFync():
+    print("hii there , I frm before the pass statment")
+    pass
+myFync()
+
+class person:
+    def  __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f"Hii my name is {self.name}, and I am {self.age} years old")
+
+c = person("Astick", 27)
+c.info()
+
+
+# count
+
+a = [7,3, 3, 4,25, 5]
+
+print(a.count(3))
+
+# index
+my_list =  [7, 3, 3, 4, 25, 5]
+
+print(my_list.index(5))
+
+# pop
+my_list =  [7, 3, 3, 4, 25, 5]
+print(my_list.pop(2))
+print(my_list)
