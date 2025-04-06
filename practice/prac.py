@@ -609,11 +609,11 @@ def is_prime(n):
         return True
     
 try:
-    num = int(input("Enter a number :"))
-    if is_prime(num):
-        print(f"given number {num} is a prime number")
+    number = int(input("Enter a number :"))
+    if is_prime(number):
+        print(f"given number {number} is a prime number")
     else:
-        print(f"given number {num} is not a prime number")
+        print(f"given number {number} is not a prime number")
 
 except ValueError:
     print("Invalid input, please enter a number")
