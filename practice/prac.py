@@ -661,3 +661,47 @@ if sum == num:
     print("Given number is armstrong number")
 else:
     print("given number is not an armstrong number")
+
+num = int(input("Enter a number: "))
+x = num
+reverse = 0
+
+while num > 0:
+    reverse = (reverse*10) + num % 10
+    num //= 10
+
+if(x == reverse):
+    print("Given Number is Palindrome")
+else:
+    print("Given number is not a Palindrome")
+
+num = int(input("Enter a number: "))
+
+fact = 1
+i = 1
+
+while i <= num:
+    fact *= i
+    i+=1
+
+print("Given value's factorial value is", fact)
+
+num = int(input("Enter a number: "))
+
+fact = 1
+i = 1
+
+while i <= num:
+    fact *= i
+    i+=1
+
+print("Given value's factorial value is", fact)
+
+ls = [1,1,2,2,2,2,2,5,9,4]
+
+el = []
+
+for i in ls:
+    if i not in el:
+        el.append(i)
+print(el)
