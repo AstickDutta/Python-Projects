@@ -706,10 +706,46 @@
 #         el.append(i)
 # print(el)
 
-student = { "history": 50, "geography": 9, "english": 12 }
-di = {}
-for item in student:
-    if student[item] >= 10:
-        di[item] = student[item]
+# student = { "history": 50, "geography": 9, "english": 12 }
+# di = {}
+# for item in student:
+#     if student[item] >= 10:
+#         di[item] = student[item]
 
-print(di)
+# print(di)
+
+# dubNumbers = [3,4,5,2,6,2,7,4,5]
+# uniqueNumbers = []
+
+# for i in dubNumbers:
+#     if i not in uniqueNumbers:
+#         uniqueNumbers.append(i)
+
+# print("unique numbers list", uniqueNumbers)
+
+
+# number = int(input("Enter a number: "))
+
+# fact = 1
+# i = 1
+
+# while i <= number:
+#     fact*=i
+#     i+=1
+
+# print(fact)
+
+number = int(input("Enter a number: "))
+
+if number < 2:
+    print("it In not a prime number")
+
+elif number == 2:
+    print("it is prime number")
+
+else:
+    for  i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            print(f"Given number is {number} id not prime number")
+        else:
+            print(f"Given number is prime number")
