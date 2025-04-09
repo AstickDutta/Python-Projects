@@ -186,12 +186,71 @@
 #         min_element = ele
 # print(f"smallest number from given list is {min_element}")
 
-number = int(input("Please enter a digit: "))
+# num_digit = input("Please enter a digit: ")
 
-num_digit = str(number)
-digit_num = 0
+# digit_num = 0
 
-for digit in num_digit:
-    digit_num += int(digit)
+# for digit in num_digit:
+#     digit_num += int(digit)
 
-print(f"Sum of given value {num_digit}'s addition is {digit_num}")
+# print(f"Sum of given value {num_digit}'s addition is {digit_num}")
+
+# def is_armstrongNumber(number):
+#     num_str = str(number)
+#     num_digit = len(num_str)
+#     armStrongNum = 0
+
+#     for digit in num_str:
+#         armStrongNum += int(digit) ** num_digit
+#     return armStrongNum == number
+    
+# input_Number = 153
+# if is_armstrongNumber(input_Number):
+#     print(input_Number, "it is a armstrong number")
+# else: 
+#     print(input_Number, "it is not armstrong number")
+
+
+# def is_leapYear(year):
+#     if(year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+#         return True
+#     else:
+#         False
+
+# input_year = int(input("Please enter a year: "))
+
+# if is_leapYear(input_year):
+#     print("Given year is a leap year")
+# else:
+#     print("Given year is not a leap year")
+
+
+# def factorialValue(number):
+#     result = 1
+
+#     for i in range(1, number + 1):
+#         result *= i
+#     return result
+
+# input_number = int(input("Please enter a value: "))
+# result = factorialValue(input_number)
+# print(f"Given value {input_number}'s factorial value is {result}")
+
+
+def find_average(number):
+    if not number:
+        return None
+    total = 0
+
+    for i in number:
+        total += i
+    average = total/len(number)
+    return average
+
+input_li = [10, 20, 30, 40, 50]
+average = find_average(input_li)
+
+if average is not None:
+    print("This the average value of given numbers", average)
+else:
+    print("This list is empty")
