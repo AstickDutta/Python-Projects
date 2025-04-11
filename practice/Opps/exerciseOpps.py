@@ -10,11 +10,6 @@ class Person:
         self.age = age
         self.address = address
 
-    def __init__(self, name, age, address):
-        self.name = name
-        self.age = age
-        self.address = address
-
 p1 = Person("Astick", 23, "west bengal")
 p2 = Person("Rittick", 21, "Kolkata")
 print(p1.name)
@@ -186,25 +181,49 @@ print(dog1.make_sound())
 🔴 Methods: deposit, withdraw, __str__
 '''
 
-class BankAccount:
-    def __init__(self, bankHolderName, balance = 0):
-        self.bankHolderName = bankHolderName
-        self.balance = balance
+# class BankAccount:
+#     def __init__(self, bankHolderName, balance = 0):
+#         self.bankHolderName = bankHolderName
+#         self.balance = balance
 
-    def deposit(self, amount):
-        self.balance += amount
-        return self.balance
+#     def deposit(self, amount):
+#         self.balance += amount
+#         return self.balance
     
-    def WithDraw(self, amount):
-        if self.balance < amount:
-            return "Insufficient Balance"
-        self.balance -= amount
-        return self.balance
+#     def WithDraw(self, amount):
+#         if self.balance < amount:
+#             return "Insufficient Balance"
+#         self.balance -= amount
+#         return self.balance
     
-    def __str__(self):
-       return f"Account holder name {self.bankHolderName}, balance {self.balance}"
+#     def __str__(self):
+#         return f"This Account details of name {self.bankHolderName}, and Balance is {self.balance}"
+    
 
-account = BankAccount("Astick Dutta", 200000)
-account.deposit(60000)
-account.WithDraw(230000)
-print(account)
+# account = BankAccount("Astick", 600000)
+# account.deposit(90000)
+# account.WithDraw(89000)
+# print(account)
+
+'''
+🔴 Iterator example:
+'''
+
+class Student:
+    def __iter__(self):
+        self.a = 1
+        return self
+    
+    def __next__(self):
+        x = self.a
+        self.a += 1
+
+        return x
+    
+myClass = Student()
+myRollNumber = iter(myClass)
+
+print(next(myRollNumber))
+print(next(myRollNumber))
+print(next(myRollNumber))
+print(next(myRollNumber))
