@@ -209,21 +209,21 @@ print(dog1.make_sound())
 🔴 Iterator example:
 '''
 
-class Student:
-    def __iter__(self):
-        self.a = 1
-        return self
+# class Student:
+#     def __iter__(self):
+#         self.a = 1
+#         return self
     
-    def __next__(self):
-        x = self.a
-        self.a += 1
+#     def __next__(self):
+#         x = self.a
+#         self.a += 1
 
-        return x
+#         return x
     
-myClass = Student()
-myRollNumber = iter(myClass)
+# myClass = Student()
+# myRollNumber = iter(myClass)
 
-print(next(myRollNumber))
-print(next(myRollNumber))
-print(next(myRollNumber))
-print(next(myRollNumber))
+# print(next(myRollNumber))
+# print(next(myRollNumber))
+# print(next(myRollNumber))
+# print(next(myRollNumber))

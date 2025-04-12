@@ -735,17 +735,17 @@
 
 # print(fact)
 
-number = int(input("Enter a number: "))
+# number = int(input("Enter a number: "))
 
-if number < 2:
-    print("it In not a prime number")
+# if number < 2:
+#     print("it In not a prime number")
 
-elif number == 2:
-    print("it is prime number")
+# elif number == 2:
+#     print("it is prime number")
 
-else:
-    for  i in range(2, int(number ** 0.5) + 1):
-        if number % i == 0:
-            print(f"Given number is {number} id not prime number")
-        else:
-            print(f"Given number is prime number")
+# else:
+#     for  i in range(2, int(number ** 0.5) + 1):
+#         if number % i == 0:
+#             print(f"Given number is {number} id not prime number")
+#         else:
+#             print(f"Given number is prime number")
