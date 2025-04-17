@@ -1,6 +1,6 @@
 '''
 🔴 Polymorphism:
-🔴 For example, say we have three classes: Car, Boat, and Plane, and they all have a method called move():
+🔴 For example, say we have three classes: Car, Boat, and Plane, and they all have a method called move()..:
 '''
 
 
