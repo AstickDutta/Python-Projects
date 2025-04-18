@@ -749,3 +749,42 @@
 #             print(f"Given number is {number} id not prime number")
 #         else:
 #             print(f"Given number is prime number")
+
+
+"""
+🔴 Create a program to find and print the first 5 pairs of consecutive prime numbers using a while loop
+"""
+
+# def is_prime(number):
+
+#     if number < 2:
+#         return False
+
+#     for num in range(2, int(number ** 0.5) + 1):
+#         if number % num == 0:
+#            return False
+#         else:
+#             return True
+# def find_consecutive_prime_pairs():
+#     count = 0
+#     current = 2
+
+#     while count < 5:
+#         if is_prime(current) and is_prime(current + 2):
+#             print(f"Pair {count + 1}: ({current}, {current + 2})")
+#             count += 1
+#         current += 1
+
+# find_consecutive_prime_pairs()
+
+def star_prob():
+    i = 1
+    while i <= 5:
+        j = 1
+        while j <= i:
+            print("*", end = "")
+            j += 1
+        print()
+        i += 1
+
+star_prob()
