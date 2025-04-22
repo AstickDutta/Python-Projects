@@ -1,19 +1,26 @@
+
 import time
+# my_time = int(input("Enter the time in seconds: "))
 
-# my_time1 = int(input("enter the time: "))
-
-# for i in range(0, my_time1):
-#     print(f"{my_time1 - i} seconds remaining...")
+# for i in range(my_time, 0, -1):
+#     second = i % 60
+#     minutes = (i // 60) % 60
+#     hours = i // 3600
+#     print(f"{hours:02}:{minutes:02}:{second:02}")
 #     time.sleep(1)
-# print("times up!!")
 
-my_time = int(input("enter the time: "))
+# print("Time's up!")
 
-for i in range(my_time, 0, -1):
-    seceond = i % 60
-    minutes = int(i/60) % 60
-    hours = int(i/3600)
-    print(f"{hours:02}:{minutes:02}:{seceond:02}")
-    time.sleep(1)
-print("times up!!")
+def countdown_timer():
+    my_time = int(input("Enter the time in seconds: "))
 
+    for second in range(my_time, 0, -1 ):
+        seconds = second % 60
+        minutes = ( second // 60) % 60
+        hours = second // 3600
+        print(f"{hours:02}:{minutes:02}:{seconds:02}")
+        time.sleep(1)
+
+    print("Time's up!")
+
+countdown_timer()
