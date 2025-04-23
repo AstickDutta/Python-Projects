@@ -820,26 +820,26 @@
 
 # # star_prob2()
 
-def palindromic_pyramid():
-    number = int(input("Please enter a number: "))
-    k = 1
-    i = 1
+# def palindromic_pyramid():
+#     number = int(input("Please enter a number: "))
+#     k = 1
+#     i = 1
 
-    while i <= number:
-        b = 1
-        while b <= number - i:
-            print(" ", end = "")
-            b += 1
+#     while i <= number:
+#         b = 1
+#         while b <= number - i:
+#             print(" ", end = "")
+#             b += 1
 
-        j = 1
-        while j <= k:
-            print("*", end = "")
-            j += 1
-        print()
-        k += 2
-        i += 1
+#         j = 1
+#         while j <= k:
+#             print("*", end = "")
+#             j += 1
+#         print()
+#         k += 2
+#         i += 1
 
-palindromic_pyramid()
+# palindromic_pyramid()
 
 
 # #      *
@@ -853,3 +853,26 @@ palindromic_pyramid()
 # #    *****
 # #     ***
 # #      *
+
+"""
+Adding elements: add(), update()
+
+Removing elements: remove(), discard(), pop(), clear()
+
+Set operations: union(), intersection(), difference(), symmetric_difference()
+
+Comparison: issubset(), issuperset(), isdisjoint()
+
+Others: copy()
+"""
+
+"""
+Reverse a String:
+Write a Python function to reverse a string without using built-in functions.
+"""
+
+def reverse_str(str_input):
+    for word in range(len(str_input)-1 , -1, -1):
+        print(str_input[word], end="")
+str_input = input("please enter a word : ")
+reverse_str(str_input)
