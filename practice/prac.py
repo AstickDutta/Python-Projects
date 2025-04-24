@@ -820,26 +820,26 @@
 
 # # star_prob2()
 
-# def palindromic_pyramid():
-#     number = int(input("Please enter a number: "))
-#     k = 1
-#     i = 1
+def palindromic_pyramid():
+    number = int(input("Please enter a number: "))
+    k = 1
+    i = 1
 
-#     while i <= number:
-#         b = 1
-#         while b <= number - i:
-#             print(" ", end = "")
-#             b += 1
+    while i <= number:
+        b = 1
+        while b <= number - i:
+            print(" ", end = "")
+            b += 1
 
-#         j = 1
-#         while j <= k:
-#             print("*", end = "")
-#             j += 1
-#         print()
-#         k += 2
-#         i += 1
+        j = 1
+        while j <= k:
+            print("*", end = "")
+            j += 1
+        print()
+        k += 2
+        i += 1
 
-# palindromic_pyramid()
+palindromic_pyramid()
 
 
 # #      *
