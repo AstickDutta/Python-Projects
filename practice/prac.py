@@ -873,6 +873,23 @@ Write a Python function to reverse a string without using built-in functions.
 
 def reverse_str(str_input):
     for word in range(len(str_input)-1 , -1, -1):
-        print(str_input[word], end="")
+        print(str_input[word], end = "")
 str_input = input("please enter a word : ")
 reverse_str(str_input)
+
+"""
+16. First,Last elements whose square value is between 1 and 30 - Write a Python program to find the first and last elements in a list where the square of the element is between 1 and 40.
+"""
+
+def square_value(first_value , last_value):
+    square_numbers = []
+
+    for number in range(first_value, last_value + 1):
+        if first_value <= number ** 2 <= last_value:
+            square_numbers.append(number ** 2)
+    return f"square values of given numbers are {square_numbers}"
+
+first_value = int(input("Please enter first value: "))
+last_value = int(input("Please enter last_value: "))
+
+print(square_value(first_value, last_value))
