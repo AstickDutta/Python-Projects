@@ -820,26 +820,26 @@
 
 # # star_prob2()
 
-def palindromic_pyramid():
-    number = int(input("Please enter a number: "))
-    k = 1
-    i = 1
+# def palindromic_pyramid():
+#     number = int(input("Please enter a number: "))
+#     k = 1
+#     i = 1
 
-    while i <= number:
-        b = 1
-        while b <= number - i:
-            print(" ", end = "")
-            b += 1
+#     while i <= number:
+#         b = 1
+#         while b <= number - i:
+#             print(" ", end = "")
+#             b += 1
 
-        j = 1
-        while j <= k:
-            print("*", end = "")
-            j += 1
-        print()
-        k += 2
-        i += 1
+#         j = 1
+#         while j <= k:
+#             print("*", end = "")
+#             j += 1
+#         print()
+#         k += 2
+#         i += 1
 
-palindromic_pyramid()
+# palindromic_pyramid()
 
 
 # #      *
@@ -871,25 +871,43 @@ Reverse a String:
 Write a Python function to reverse a string without using built-in functions.
 """
 
-def reverse_str(str_input):
-    for word in range(len(str_input)-1 , -1, -1):
-        print(str_input[word], end = "")
-str_input = input("please enter a word : ")
-reverse_str(str_input)
+# def reverse_str(str_input):
+#     for word in range(len(str_input)-1 , -1, -1):
+#         print(str_input[word], end = "")
+# str_input = input("please enter a word : ")
+# reverse_str(str_input)
 
 """
-16. First,Last elements whose square value is between 1 and 30 - Write a Python program to find the first and last elements in a list where the square of the element is between 1 and 40.
+16. First,Last elements whose square value is between 1 and 30 - Write a Python program to find the first and last elements in a list where the square of the element is between 1 and 30.
 """
 
-def square_value(first_value , last_value):
-    square_numbers = []
+# def square_value(first_value , last_value):
+#     square_numbers = []
 
-    for number in range(first_value, last_value + 1):
-        if first_value <= number ** 2 <= last_value:
-            square_numbers.append(number ** 2)
-    return f"square values of given numbers are {square_numbers}"
+#     for number in range(first_value, last_value + 1):
+#         if first_value <= number ** 2 <= last_value:
+#             square_numbers.append(number ** 2)
+#     return f"square values of given numbers are {square_numbers}"
 
-first_value = int(input("Please enter first value: "))
-last_value = int(input("Please enter last_value: "))
+# first_value = int(input("Please enter first value: "))
+# last_value = int(input("Please enter last_value: "))
 
-print(square_value(first_value, last_value))
+# print(square_value(first_value, last_value))
+
+
+"""
+find longest word in side a list
+"""
+
+def largest_str(words):
+    if not words:
+        return f"Please provide a list"
+
+    largest_str = ""
+    for word in words:
+        if len(word) > len(largest_str):
+            largest_str = word
+    return f"Largest string from given list is {largest_str}"
+
+words = ["Astick", "Riju", "Batash", "Souvik", "Sukanya"]
+print(largest_str(words))
