@@ -881,18 +881,18 @@ Write a Python function to reverse a string without using built-in functions.
 16. First,Last elements whose square value is between 1 and 30 - Write a Python program to find the first and last elements in a list where the square of the element is between 1 and 30.
 """
 
-# def square_value(first_value , last_value):
-#     square_numbers = []
+def square_value(first_value , last_value):
+    square_numbers = []
 
-#     for number in range(first_value, last_value + 1):
-#         if first_value <= number ** 2 <= last_value:
-#             square_numbers.append(number ** 2)
-#     return f"square values of given numbers are {square_numbers}"
+    for number in range(first_value, last_value + 1):
+        if first_value <= number ** 2 <= last_value:
+            square_numbers.append(number ** 2)
+    return f"square values of given numbers are {square_numbers}"
 
-# first_value = int(input("Please enter first value: "))
-# last_value = int(input("Please enter last_value: "))
+first_value = int(input("Please enter first value: "))
+last_value = int(input("Please enter last_value: "))
 
-# print(square_value(first_value, last_value))
+print(square_value(first_value, last_value))
 
 
 """
