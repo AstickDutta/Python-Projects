@@ -911,3 +911,43 @@ def largest_str(words):
 
 words = ["Astick", "Riju", "Batash", "Souvik", "Sukanya"]
 print(largest_str(words))
+
+
+def number_series(number):
+    current = 0
+    diff = 0
+    for i in range(number):
+        print(current, end=" ")
+        current += diff
+        diff += 2
+        
+number = int(input("Please input a number: "))
+number_series(number)
+
+def custom_series(number):
+    current = 0
+    for i in range(number):
+        print(current, end=" ")
+        if i % 4 == 0:
+            current += 5
+        else:
+            if i % 4 == 2:
+                current += 120
+            else:
+                current += 0
+
+number = int(input("Please enter value: "))
+custom_series(number)
+
+def reverse_number(number):
+    reversed_number = 0
+    
+    while number != 0:
+        last_digit = number % 10
+        reversed_number = reversed_number * 10 + last_digit
+        number //= 10
+
+    return f"after reversed given number is {reversed_number}"
+
+number = int(input("Please enter a number: "))
+print(reverse_number(number))
