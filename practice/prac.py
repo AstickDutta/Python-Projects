@@ -777,48 +777,57 @@
 
 # # find_consecutive_prime_pairs()
 
-# # def star_prob():
-# #     i = 1
-# #     while i <= 5:
-# #         j = 1
-# #         while j <= i:
-# #             print("*", end = "")
-# #             j += 1
-# #         print()
-# #         i += 1
+# def star_prob():
+#     i = 1
+#     while i <= 5:
+#         j = 1
+#         while j <= i:
+#             print("*", end = "")
+#             j += 1
+#         print()
+#         i += 1
 
-# # star_prob()
+# star_prob()
 
-# # def star_prob1():
-# #     number = int(input("Enter a number : "))
-# #     i = 1
-# #     while i <= number:
-# #         j = 1
-# #         while j <= i:
-# #             print( i , end = "" )
-# #             j += 1
-# #         print()
-# #         i += 1
+# def star_prob1():
+#     number = int(input("Enter a number : "))
+#     i = 1
+#     while i <= number:
+#         j = 1
+#         while j <= i:
+#             print( i , end = "" )
+#             j += 1
+#         print()
+#         i += 1
         
-# # star_prob1()
+# star_prob1()
+
+# n = 5
+# for i in range(n):
+#     for j in range(n):
+#         if i+j == n-1:
+#             print("*", end=" ")
+#         else:
+#             print("*", end=" ")
 
 
-# # def star_prob2():
-# #     number = int(input("Please enter a number: "))
-# #     i = 1
-# #     while i <= number:
-# #         b = 1
-# #         while b <= number - i:
-# #             print(" ", end="")
-# #             b += 1
-# #         j = 1
-# #         while j <= i:
-# #             print(i, end = "")
-# #             j += 1
-# #         print()
-# #         i += 1
 
-# # star_prob2()
+# def star_prob2():
+#     number = int(input("Please enter a number: "))
+#     i = 1
+#     while i <= number:
+#         b = 1
+#         while b <= number - i:
+#             print(" ", end="")
+#             b += 1
+#         j = 1
+#         while j <= i:
+#             print("*", end = "")
+#             j += 1
+#         print()
+#         i += 1
+
+# star_prob2()
 
 # def palindromic_pyramid():
 #     number = int(input("Please enter a number: "))
@@ -899,55 +908,60 @@ Write a Python function to reverse a string without using built-in functions.
 find longest word in side a list
 """
 
-def largest_str(words):
-    if not words:
-        return f"Please provide a list"
+# def largest_str(words):
+#     if not words:
+#         return f"Please provide a list"
 
-    largest_str = ""
-    for word in words:
-        if len(word) > len(largest_str):
-            largest_str = word
-    return f"Largest string from given list is {largest_str}"
+#     largest_str = ""
+#     for word in words:
+#         if len(word) > len(largest_str):
+#             largest_str = word
+#     return f"Largest string from given list is {largest_str}"
 
-words = ["Astick", "Riju", "Batash", "Souvik", "Sukanya"]
-print(largest_str(words))
+# words = ["Astick", "Riju", "Batash", "Souvik", "Sukanya"]
+# print(largest_str(words))
 
 
-def number_series(number):
-    current = 0
-    diff = 0
-    for i in range(number):
-        print(current, end=" ")
-        current += diff
-        diff += 2
+# def number_series(number):
+#     current = 0
+#     diff = 0
+#     for i in range(number):
+#         print(current, end=" ")
+#         current += diff
+#         diff += 2
         
-number = int(input("Please input a number: "))
-number_series(number)
+# number = int(input("Please input a number: "))
+# number_series(number)
 
-def custom_series(number):
-    current = 0
-    for i in range(number):
-        print(current, end=" ")
-        if i % 4 == 0:
-            current += 5
-        else:
-            if i % 4 == 2:
-                current += 120
-            else:
-                current += 0
+# def custom_series(number):
+#     current = 0
+#     for i in range(number):
+#         print(current, end=" ")
+#         if i % 4 == 0:
+#             current += 5
+#         else:
+#             if i % 4 == 2:
+#                 current += 120
+#             else:
+#                 current += 0
 
-number = int(input("Please enter value: "))
-custom_series(number)
+# number = int(input("Please enter value: "))
+# custom_series(number)
 
-def reverse_number(number):
-    reversed_number = 0
+# def reverse_number(number):
+#     reversed_number = 0
     
-    while number != 0:
-        last_digit = number % 10
-        reversed_number = reversed_number * 10 + last_digit
-        number //= 10
+#     while number != 0:
+#         last_digit = number % 10
+#         reversed_number = reversed_number * 10 + last_digit
+#         number //= 10
 
-    return f"after reversed given number is {reversed_number}"
+#     return f"after reversed given number is {reversed_number}"
 
-number = int(input("Please enter a number: "))
-print(reverse_number(number))
+# number = int(input("Please enter a number: "))
+# print(reverse_number(number))
+
+# def star_patterns(rows):
+
+#     for i in range(rows, 0, -1):
+#         print('*' * i)

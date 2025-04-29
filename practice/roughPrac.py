@@ -195,20 +195,20 @@
 
 # print(f"Sum of given value {num_digit}'s addition is {digit_num}")
 
-def is_armstrongNumber(number):
-    num_str = str(number)
-    num_digit = len(num_str)
-    armStrongNum = 0
+# def is_armstrongNumber(number):
+#     num_str = str(number)
+#     num_digit = len(num_str)
+#     armStrongNum = 0
 
-    for digit in num_str:
-        armStrongNum += int(digit) ** num_digit
-    return armStrongNum == number
+#     for digit in num_str:
+#         armStrongNum += int(digit) ** num_digit
+#     return armStrongNum == number
     
-input_Number = 153
-if is_armstrongNumber(input_Number):
-    print(input_Number, "it is a armstrong number")
-else: 
-    print(input_Number, "it is not armstrong number")
+# input_Number = 153
+# if is_armstrongNumber(input_Number):
+#     print(input_Number, "it is a armstrong number")
+# else: 
+#     print(input_Number, "it is not armstrong number")
 
 
 # def is_leapYear(year):
@@ -254,3 +254,36 @@ else:
 #     print("This the average value of given numbers", average)
 # else:
 #     print("This list is empty")
+
+
+"""
+Fibonacci series..!!
+"""
+
+# def fibonacci(number):
+#     if number <= 0:
+#         print("Please enter a positive integer greater than 0.")
+#         return
+#     a = 0
+#     b = 1
+
+#     if number == 1:
+#          print(a)
+#     else:
+#         print(a)
+#         print(b)
+        
+#         for num in range(2, number):
+#             c = a + b
+#             a = b
+#             b = c
+#             print (c)
+
+# number = int(input("please enter a number: "))
+# fibonacci(number)
+
+
+
+
+
+
