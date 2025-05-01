@@ -13,9 +13,8 @@ def check_status(code: int):
 
 check_status(200)
 check_status(404)
-check_status(123)  # Unknown Status Code
+check_status(123)
 
-# Example with multiple cases
 
 def day_type(day: str):
     match day.lower():
@@ -28,9 +27,7 @@ def day_type(day: str):
 
 day_type("Sunday")
 day_type("Wednesday")
-day_type("Holiday")  # Invalid day!
-
-# Example with tuples
+day_type("Holiday")
 
 def get_shape(sides: int):
     match sides:
@@ -45,4 +42,4 @@ def get_shape(sides: int):
 
 get_shape(3)
 get_shape(4)
-get_shape(7)  # Shape not recognized
+get_shape(7)
