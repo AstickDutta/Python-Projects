@@ -967,15 +967,15 @@ find longest word in side a list
 #         print('*' * i)
 
 
-def factorial_number(number):
-    if number == 0:
-        print("given number is 0 and factorial of 0 is ", 1)
-        
-    factorial = 1
-    while number > 0:
-        factorial *= number
-        number -= 1
-    return factorial
+# def factorial_number(number):
+#     if number == 0:
+#         print(1)
 
-number = int(input("please enter a number: "))
-print(factorial_number(number))
+#     factorial = 1
+#     while number > 0:
+#         factorial *= number
+#         number -= 1
+#     return factorial
+
+# number = int(input("please enter a number: "))
+# print(factorial_number(number))

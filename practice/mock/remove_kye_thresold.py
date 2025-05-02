@@ -5,6 +5,6 @@ def remove_keys_below_threshold(dict1, threshold):
             result[key] = value
     return result
 
-dict1 = {"a": 12, "j": 4, "u": 23}
+dict1 = {"a": 12, "j": 4, "u": 23, "p": 89, "l": 30}
 threshold = int(input("Please enter a number: "))
 print(remove_keys_below_threshold(dict1, threshold))

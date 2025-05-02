@@ -260,27 +260,27 @@
 Fibonacci series..!!
 """
 
-# def fibonacci(number):
-#     if number <= 0:
-#         print("Please enter a positive integer greater than 0.")
-#         return
-#     a = 0
-#     b = 1
+def fibonacci(number):
+    if number <= 0:
+        print("Please enter a positive integer greater than 0.")
+        return
+    a = 0
+    b = 1
 
-#     if number == 1:
-#          print(a)
-#     else:
-#         print(a)
-#         print(b)
+    if number == 1:
+         print(a)
+    else:
+        print(a)
+        print(b)
         
-#         for num in range(2, number):
-#             c = a + b
-#             a = b
-#             b = c
-#             print (c)
+        for num in range(2, number):
+            c = a + b
+            a = b
+            b = c
+            print(c)
 
-# number = int(input("please enter a number: "))
-# fibonacci(number)
+number = int(input("please enter a number: "))
+fibonacci(number)
 
 
 
