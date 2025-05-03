@@ -595,19 +595,22 @@
 # # print(my_list.pop(2))
 # # print(my_list)
 
-# # def is_prime(n):
-# #     if n <= 1:
-# #         return False
-# #     if n == 2:
-# #         return True
-# #     if n % 2 == 0:
-# #         return False
+# def is_prime(n):
+#     if n <= 1:
+#         return False
+#     if n == 2:
+#         return True
+#     if n % 2 == 0:
+#         return False
     
-# #     for i  in range (3, int(n ** 0.5) + 1, 2):
-# #         if n % i == 0:
-# #             return False
-# #         return True
+#     for i  in range (3, int(n ** 0.5) + 1, 2):
+#         if n % i == 0:
+#             return False
+#         return True
     
+# n = int(input("Please enter a number : "))
+# print(is_prime(n))
+
 # # try:
 # #     number = int(input("Enter a number :"))
 # #     if is_prime(number):
@@ -979,3 +982,55 @@ find longest word in side a list
 
 # number = int(input("please enter a number: "))
 # print(factorial_number(number))
+
+
+def check_armstrong_number(number):
+    str_digit = str(number)
+    armstrong = 0
+    digit_count = len(str_digit)
+
+    for num in str_digit:
+        armstrong += int(num) ** digit_count
+    if armstrong == number:
+        print("given number is an armstrong number..!!")
+    else:
+        print("It is not an armstrong number..!!")
+
+number = int(input("Please enter a number : "))
+check_armstrong_number(number)
+
+def check_prime_number(number):
+    if number <= 1 or (number % 2 == 0 and number != 2):
+        return False
+    for element in range(3, int(number ** 0.5) + 1 , 2):
+        if number % element == 0:
+            return False
+    return True
+
+def range_prime(first_number, last_number):
+    for number in range(first_number, last_number + 1):
+        if check_prime_number(number):
+            print(number)
+
+first_number = int(input("Please enter a first number: "))
+last_number = int(input("Please enter a last number: "))
+range_prime(first_number,last_number)
+
+def factorial(number):
+    fact = 1
+    for num in range(1, number + 1):
+        fact *= num
+    return fact
+
+def check_strong_number(number):
+    str_number = str(number)
+    sum = 0
+    for num in str_number:
+        sum += factorial(int(num))
+    if sum == number:
+        print("Given number is a strong number")
+    else:
+        print("Given number is not a strong number")
+
+number = int(input("Please enter a number: "))
+check_strong_number(number)
