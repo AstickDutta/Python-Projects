@@ -999,6 +999,7 @@ def check_armstrong_number(number):
 number = int(input("Please enter a number : "))
 check_armstrong_number(number)
 
+
 def check_prime_number(number):
     if number <= 1 or (number % 2 == 0 and number != 2):
         return False
@@ -1015,6 +1016,8 @@ def range_prime(first_number, last_number):
 first_number = int(input("Please enter a first number: "))
 last_number = int(input("Please enter a last number: "))
 range_prime(first_number,last_number)
+
+#  "****************************************************************"
 
 def factorial(number):
     fact = 1
