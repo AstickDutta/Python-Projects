@@ -1037,3 +1037,8 @@ def check_strong_number(number):
 
 number = int(input("Please enter a number: "))
 check_strong_number(number)
+
+dic={'a':1, 'b':2}
+
+
+print(dic[a])

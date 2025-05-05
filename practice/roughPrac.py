@@ -59,36 +59,36 @@
 #     print("Given string is not a palindrome")
 
 
-# str1 = "Python"
-# str2 = "yhtonp"
+str1 = input("please enter a value: ")
+str2 = input("please enter a value: ")
 
-# str1 = str1.lower()
-# str2 = str2.lower()
+str1 = str1.lower()
+str2 = str2.lower()
 
-# if len(str1) != len(str2):
-#      print("The strings have different lengths and cannot be anagrams.")
+if len(str1) != len(str2):
+     print("The strings have different lengths and cannot be anagrams.")
 
-# else:
-#     charStr1 = {}
-#     charStr2 = {}
+else:
+    charStr1 = {}
+    charStr2 = {}
 
-#     for char in str1:
-#         if char in charStr1:
-#             charStr1[char] = +1
-#         else:
-#             charStr1[char] = 1
+    for char in str1:
+        if char in charStr1:
+            charStr1[char] = +1
+        else:
+            charStr1[char] = 1
 
-#     for char in str2:
-#         if char in charStr2:
-#             charStr2[char] = +1
-#         else:
-#             charStr2[char] = 1
+    for char in str2:
+        if char in charStr2:
+            charStr2[char] = +1
+        else:
+            charStr2[char] = 1
 
-#     if charStr1 == charStr2:
-#         print("Given word is an Anagrams")
+    if charStr1 == charStr2:
+        print("Given word is an Anagrams")
 
-#     else:
-#         print("Given word is not an Anagrams")
+    else:
+        print("Given word is not an Anagrams")
 
 
 # string = "m d m"
@@ -237,50 +237,50 @@
 # print(f"Given value {input_number}'s factorial value is {result}")
 
 
-def find_average(number):
-    if not number:
-        return None
-    total = 0
+# def find_average(number):
+#     if not number:
+#         return None
+#     total = 0
 
-    for i in number:
-        total += i
-    average = total/len(number)
-    return average
+#     for i in number:
+#         total += i
+#     average = total/len(number)
+#     return average
 
-input_li = [10, 20, 30, 40, 50]
-average = find_average(input_li)
+# input_li = [10, 20, 30, 40, 50]
+# average = find_average(input_li)
 
-if average is not None:
-    print("This the average value of given numbers", average)
-else:
-    print("This list is empty")
+# if average is not None:
+#     print("This the average value of given numbers", average)
+# else:
+#     print("This list is empty")
 
 
 """
 Fibonacci series..!!
 """
 
-def fibonacci(number):
-    if number <= 0:
-        print("Please enter a positive integer greater than 0.")
-        return
-    a = 0
-    b = 1
+# def fibonacci(number):
+#     if number <= 0:
+#         print("Please enter a positive integer greater than 0.")
+#         return
+#     a = 0
+#     b = 1
 
-    if number == 1:
-         print(a)
-    else:
-        print(a)
-        print(b)
+#     if number == 1:
+#          print(a)
+#     else:
+#         print(a)
+#         print(b)
         
-        for num in range(2, number):
-            c = a + b
-            a = b
-            b = c
-            print(c)
+#         for num in range(2, number):
+#             c = a + b
+#             a = b
+#             b = c
+#             print(c)
 
-number = int(input("please enter a number: "))
-fibonacci(number)
+# number = int(input("please enter a number: "))
+# fibonacci(number)
 
 
 
