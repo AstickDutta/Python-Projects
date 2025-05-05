@@ -237,23 +237,23 @@
 # print(f"Given value {input_number}'s factorial value is {result}")
 
 
-# def find_average(number):
-#     if not number:
-#         return None
-#     total = 0
+def find_average(number):
+    if not number:
+        return None
+    total = 0
 
-#     for i in number:
-#         total += i
-#     average = total/len(number)
-#     return average
+    for i in number:
+        total += i
+    average = total/len(number)
+    return average
 
-# input_li = [10, 20, 30, 40, 50]
-# average = find_average(input_li)
+input_li = [10, 20, 30, 40, 50]
+average = find_average(input_li)
 
-# if average is not None:
-#     print("This the average value of given numbers", average)
-# else:
-#     print("This list is empty")
+if average is not None:
+    print("This the average value of given numbers", average)
+else:
+    print("This list is empty")
 
 
 """
