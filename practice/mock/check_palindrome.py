@@ -38,17 +38,15 @@
 # print(common_ele(list1))
 
 
-def palindrome(original_number):
-    temp_number = original_number
-    reversed_number = 0
+# def palindrome(original_number):
+#     temp_number = original_number
+#     reversed_number = 0
 
-    while temp_number > 0:
-        last_digit = temp_number % 10
-        reversed_number = reversed_number * 10 + last_digit
-        temp_number //= 10
-    return "it is a palindrome" if reversed_number == original_number else "it is not a palindrome"
+#     while temp_number > 0:
+#         last_digit = temp_number % 10
+#         reversed_number = reversed_number * 10 + last_digit
+#         temp_number //= 10
+#     return "it is a palindrome" if reversed_number == original_number else "it is not a palindrome"
 
-original_number = int(input("Please enter number : "))
-print(palindrome(original_number))
-
-
+# original_number = int(input("Please enter number : "))
+# print(palindrome(original_number))

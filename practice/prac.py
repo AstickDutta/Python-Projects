@@ -1116,3 +1116,45 @@ longest word in a sentence..!!
 # number = int(input("Please enter a number : "))
 # print(prime_number(number))
 
+
+# def check_palindrome(number):
+#     tem_number = number
+#     revesed_num = 0
+
+#     while tem_number > 0:
+#         last_digit = tem_number % 10
+#         revesed_num = revesed_num * 10 + last_digit
+#         tem_number //= 10
+#     return "it is palidrome" if revesed_num == number else "it is not a palindrome"
+
+# number = int(input("Please enter a number : "))
+# print(check_palindrome(number))
+
+# def group(dict1):
+#     new_dict = {}
+#     for item in dict1:
+#         list1 = []
+#         if dict1[item] not in new_dict:
+#             new_dict[dict1[item]] = [item]
+
+#         else:
+#             for in_item in new_dict[dict1[item]]:
+#                 list1.append(in_item)
+#             list1.append(item)
+#             new_dict[dict1[item]] = list1
+#     return new_dict
+
+# dict1 = {"a": 1, "b": 3, "d": 1, "t": 7, "e":3}
+# print(group(dict1))
+
+def common_element(list1):
+    common = list1[0]
+    for sublist in list1[1:]:
+        temp = []
+        for num in common:
+            if num in sublist:
+                temp.append(num)
+        common = temp
+    return common
+list1 = [[1, 2, 3], [3, 4,5], [3, 6, 99]]
+print(common_element(list1))
