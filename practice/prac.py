@@ -1104,17 +1104,17 @@ longest word in a sentence..!!
 # number = int(input("please enter a number : "))
 # print(check_armstrong_number(number))
 
-# def prime_number(number):
-#     if number < 2 :
-#         return "given number is not prime number..!"
+def prime_number(number):
+    if number < 2 :
+        return "given number is not prime number..!"
     
-#     for num in range(2, int(number ** 0.5) + 1):
-#         if number % num == 0:
-#             return "given number is not prime"
-#     return "given number is prime"
+    for num in range(2, int(number ** 0.5) + 1):
+        if number % num == 0:
+            return "given number is not prime"
+    return "given number is prime"
         
-# number = int(input("Please enter a number : "))
-# print(prime_number(number))
+number = int(input("Please enter a number : "))
+print(prime_number(number))
 
 
 # def check_palindrome(number):
