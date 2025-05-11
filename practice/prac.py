@@ -1092,17 +1092,17 @@ longest word in a sentence..!!
 # print(check_strong_number(number))
 
 
-# def check_armstrong_number(number):
-#     armstrong_number = 0
-#     str_number = str(number)
-#     len_number = len(str_number)
+def check_armstrong_number(number):
+    armstrong_number = 0
+    str_number = str(number)
+    len_number = len(str_number)
 
-#     for num in str_number:
-#         armstrong_number += int(num) ** len_number
-#     return "given number is an armstrong number" if armstrong_number == number else "Given number is not an arm strong number"
+    for num in str_number:
+        armstrong_number += int(num) ** len_number
+    return "given number is an armstrong number" if armstrong_number == number else "Given number is not an arm strong number"
 
-# number = int(input("please enter a number : "))
-# print(check_armstrong_number(number))
+number = int(input("please enter a number : "))
+print(check_armstrong_number(number))
 
 def prime_number(number):
     if number < 2 :
