@@ -1092,29 +1092,29 @@ longest word in a sentence..!!
 # print(check_strong_number(number))
 
 
-def check_armstrong_number(number):
-    armstrong_number = 0
-    str_number = str(number)
-    len_number = len(str_number)
+# def check_armstrong_number(number):
+#     armstrong_number = 0
+#     str_number = str(number)
+#     len_number = len(str_number)
 
-    for num in str_number:
-        armstrong_number += int(num) ** len_number
-    return "given number is an armstrong number" if armstrong_number == number else "Given number is not an arm strong number"
+#     for num in str_number:
+#         armstrong_number += int(num) ** len_number
+#     return "given number is an armstrong number" if armstrong_number == number else "Given number is not an arm strong number"
 
-number = int(input("please enter a number : "))
-print(check_armstrong_number(number))
+# number = int(input("please enter a number : "))
+# print(check_armstrong_number(number))
 
-def prime_number(number):
-    if number < 2 :
-        return "given number is not prime number..!"
+# def prime_number(number):
+#     if number < 2 :
+#         return "given number is not prime number..!"
     
-    for num in range(2, int(number ** 0.5) + 1):
-        if number % num == 0:
-            return "given number is not prime"
-    return "given number is prime"
+#     for num in range(2, int(number ** 0.5) + 1):
+#         if number % num == 0:
+#             return "given number is not prime"
+#     return "given number is prime"
         
-number = int(input("Please enter a number : "))
-print(prime_number(number))
+# number = int(input("Please enter a number : "))
+# print(prime_number(number))
 
 
 # def check_palindrome(number):
@@ -1147,14 +1147,31 @@ print(prime_number(number))
 # dict1 = {"a": 1, "b": 3, "d": 1, "t": 7, "e":3}
 # print(group(dict1))
 
-def common_element(list1):
-    common = list1[0]
-    for sublist in list1[1:]:
-        temp = []
-        for num in common:
-            if num in sublist:
-                temp.append(num)
-        common = temp
-    return common
-list1 = [[1, 2, 3], [3, 4,5], [3, 6, 99]]
-print(common_element(list1))
+# def common_element(list1):
+#     common = list1[0]
+#     for sublist in list1[1:]:
+#         temp = []
+#         for num in common:
+#             if num in sublist:
+#                 temp.append(num)
+#         common = temp
+#     return common
+# list1 = [[1, 2, 3], [3, 4,5], [3, 6, 99]]
+# print(common_element(list1))
+
+
+def outer(x):
+    def inner(y):
+        return x + y
+    return inner
+
+res = outer(6) # x
+print(res)
+
+s = res(10) # y
+print(s)
+
+# def test():
+#     return "Hiii im from function"
+# x = test
+# print(x)
