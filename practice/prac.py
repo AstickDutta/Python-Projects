@@ -1160,18 +1160,31 @@ longest word in a sentence..!!
 # print(common_element(list1))
 
 
-def outer(x):
-    def inner(y):
-        return x + y
-    return inner
+# def outer(x):
+#     def inner(y):
+#         return x + y
+#     return inner
 
-res = outer(6) # x
-print(res)
+# res = outer(6) # x
+# print(res)
 
-s = res(10) # y
-print(s)
+# s = res(10) # y
+# print(s)
 
 # def test():
 #     return "Hiii im from function"
 # x = test
 # print(x)
+
+
+def armstrong_num(number):
+    str_number = str(number)
+    len_number = len(str_number)
+    armstrong_num = 0
+
+    for num in str_number:
+        armstrong_num += int(num) ** len_number
+    return "it is armstrong number " if armstrong_num == number else "it is not a armstrong number"
+
+number = int(input("Please enter a number: "))
+print(armstrong_num(number))
