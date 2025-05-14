@@ -90,16 +90,16 @@
 # 🔴 Add a method to calculate area.
 # '''
 
-class Rectangle:
-    def __init__(self, length, breadth):
-        self.length = length
-        self.breadth = breadth
+# class Rectangle:
+#     def __init__(self, length, breadth):
+#         self.length = length
+#         self.breadth = breadth
 
-    def calculate(self):
-        print(f"{self.length * self.breadth }")
+#     def calculate(self):
+#         print(f"{self.length * self.breadth }")
 
-printObj = Rectangle(3,4)
-printObj.calculate()
+# printObj = Rectangle(3,4)
+# printObj.calculate()
 
 
 # '''
@@ -137,18 +137,18 @@ printObj.calculate()
 # 🔴 Inherit a class Developer that adds a programming_language field.
 # '''
 
-class Employee:
-    def __init__(self, name, salary):
-        self.name = name
-        self.salary = salary
+# class Employee:
+#     def __init__(self, name, salary):
+#         self.name = name
+#         self.salary = salary
     
-class Developer(Employee):
-    def __init__(self, name, salary, programming_field):
-        super().__init__(name, salary)
-        self.programming_field = programming_field
+# class Developer(Employee):
+#     def __init__(self, name, salary, programming_field):
+#         super().__init__(name, salary)
+#         self.programming_field = programming_field
 
-p1 = Developer("Rittick", 349000, "ABAP Developer")
-print(p1.programming_field)
+# p1 = Developer("Rittick", 349000, "ABAP Developer")
+# print(p1.programming_field)
 
 # '''
 # 🔴 Create class Animal and class Dog inheriting from Animal. 
@@ -239,80 +239,80 @@ print(p1.programming_field)
 
 # """
 
-class Product:
-    def __init__(self , name, price):
-        self.name = name
-        self.price = price
+# class Product:
+#     def __init__(self , name, price):
+#         self.name = name
+#         self.price = price
 
-    def __str__(self):
-        return f"{self.price} - {self.name}"
+#     def __str__(self):
+#         return f"{self.price} - {self.name}"
     
-class Electronics(Product):
-    def __init__(self, name, price, warranty):
-        super().__init__(name, price)
-        self.warranty = warranty
+# class Electronics(Product):
+#     def __init__(self, name, price, warranty):
+#         super().__init__(name, price)
+#         self.warranty = warranty
 
-    def __str__(self):
-        return super().__str__() + f", Warranty: {self.warranty} years"
+#     def __str__(self):
+#         return super().__str__() + f", Warranty: {self.warranty} years"
     
-class Cloth(Product):
-    def __init__(self, name, price, size):
-        super().__init__(name, price)
-        self.size = size
+# class Cloth(Product):
+#     def __init__(self, name, price, size):
+#         super().__init__(name, price)
+#         self.size = size
     
-    def __str__(self):
-        return super().__str__() + f"Size: {self.size}"
+#     def __str__(self):
+#         return super().__str__() + f"Size: {self.size}"
 
-items = [
-    Electronics("SmartPhone", 34578, 2),
-    Cloth("Jeans", 1000, "M")
-]
+# items = [
+#     Electronics("SmartPhone", 34578, 2),
+#     Cloth("Jeans", 1000, "M")
+# ]
 
-for item in items:
-    print(item)
+# for item in items:
+#     print(item)
 
-"""
-🔴 Student Report System:
+# """
+# 🔴 Student Report System:
 
-Class Student with name, roll number
+# Class Student with name, roll number
 
-Method to add subjects and marks
+# Method to add subjects and marks
 
-Method to calculate average and grade
-"""
+# Method to calculate average and grade
+# """
 
-class Student:
-    def __init__(self, name, roll_no):
-        self.name = name
-        self.roll_no = roll_no
-        self.marks = {}
+# class Student:
+#     def __init__(self, name, roll_no):
+#         self.name = name
+#         self.roll_no = roll_no
+#         self.marks = {}
 
-    def add_subject(self, subject, mark):
-        self.marks[subject] = mark
+#     def add_subject(self, subject, mark):
+#         self.marks[subject] = mark
 
-    def calculate_average(self):
-        return sum(self.marks.values()) / len(self.marks)
+#     def calculate_average(self):
+#         return sum(self.marks.values()) / len(self.marks)
 
-    def get_grade(self):
-        avg = self.calculate_average()
-        if avg >= 90:
-            return "A"
-        elif avg >= 75:
-            return "B"
-        elif avg >= 60:
-            return "C"
-        else:
-            return "D"
+#     def get_grade(self):
+#         avg = self.calculate_average()
+#         if avg >= 90:
+#             return "A"
+#         elif avg >= 75:
+#             return "B"
+#         elif avg >= 60:
+#             return "C"
+#         else:
+#             return "D"
 
-    def __str__(self):
-        return f"Name: {self.name}, Roll No: {self.roll_no}, Grade: {self.get_grade()}"
+#     def __str__(self):
+#         return f"Name: {self.name}, Roll No: {self.roll_no}, Grade: {self.get_grade()}"
 
-student = Student("Arjun", 101)
-student.add_subject("Math", 95)
-student.add_subject("Science", 88)
-student.add_subject("English", 92)
+# student = Student("Arjun", 101)
+# student.add_subject("Math", 95)
+# student.add_subject("Science", 88)
+# student.add_subject("English", 92)
 
-print(student)
+# print(student)
 
 """
 Entities:
@@ -363,73 +363,72 @@ Example Problem:
 
 "1."
 
-class Item:
-    def __init__(self, name, price):
-        self.name = name
-        self.price = price
+# class Item:
+#     def __init__(self, name, price):
+#         self.name = name
+#         self.price = price
 
-    def get_price(self):
-        return self.price
+#     def get_price(self):
+#         return self.price
     
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Discount(ABC):
-    @abstractmethod
-    def apply_discount(self, total):
-        pass
+# class Discount(ABC):
+#     @abstractmethod
+#     def apply_discount(self, total):
+#         pass
     
-class Permanent_discount(Discount):
-    def __init__(self, percent):
-        self.percent = percent
+# class Permanent_discount(Discount):
+#     def __init__(self, percent):
+#         self.percent = percent
 
-    def apply_discount(self, total):
-        return total - (total * self.percent / 100)
+#     def apply_discount(self, total):
+#         return total - (total * self.percent / 100)
 
-class FixedDiscount(Discount):
-    def __init__(self, amount):
-        self.amount = amount
+# class FixedDiscount(Discount):
+#     def __init__(self, amount):
+#         self.amount = amount
 
-    def apply_discount(self, total):
-        return max(0, total - self.amount)
+#     def apply_discount(self, total):
+#         return max(0, total - self.amount)
     
-class Cart:
-    def __init__(self):
-        self.items = []
-        self.discount = None
+# class Cart:
+#     def __init__(self):
+#         self.items = []
+#         self.discount = None
 
-    def add_items(self, item):
-        self.items.append(item)
+#     def add_items(self, item):
+#         self.items.append(item)
 
-    def set_discount(self ,discount):
-        self.discount = discount
+#     def set_discount(self ,discount):
+#         self.discount = discount
 
-    def calculate_total(self):
-        total = sum(item.get_price() for item in self.items)
-        if self.discount:
-            total = self.discount.apply_discount(total)
-        return total
+#     def calculate_total(self):
+#         total = sum(item.get_price() for item in self.items)
+#         if self.discount:
+#             total = self.discount.apply_discount(total)
+#         return total
     
 
 
-item1 = Item("Laptop", 1000)
-item2 = Item("Mouse", 50)
-item3 = Item("Keyboard", 100)
+# item1 = Item("Laptop", 1000)
+# item2 = Item("Mouse", 50)
+# item3 = Item("Keyboard", 100)
 
-cart = Cart()
-cart.add_items(item1)
-cart.add_items(item2)
-cart.add_items(item3)
-
-
-percent_discount = Permanent_discount(10)
-cart.set_discount(percent_discount)
+# cart = Cart()
+# cart.add_items(item1)
+# cart.add_items(item2)
+# cart.add_items(item3)
 
 
-total_amount = cart.calculate_total()
-print(f"Total amount after discount: ${total_amount:.2f}")
+# percent_discount = Permanent_discount(10)
+# cart.set_discount(percent_discount)
 
-fixed_discount = FixedDiscount(200)
-cart.set_discount(fixed_discount)
-print(f"Total with fixed discount: ${cart.calculate_total():.2f}")
 
+# total_amount = cart.calculate_total()
+# print(f"Total amount after discount: ${total_amount:.2f}")
+
+# fixed_discount = FixedDiscount(200)
+# cart.set_discount(fixed_discount)
+# print(f"Total with fixed discount: ${cart.calculate_total():.2f}")

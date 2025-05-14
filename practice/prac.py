@@ -1177,14 +1177,27 @@ longest word in a sentence..!!
 # print(x)
 
 
-def armstrong_num(number):
-    str_number = str(number)
-    len_number = len(str_number)
-    armstrong_num = 0
+# def armstrong_num(number):
+#     str_number = str(number)
+#     len_number = len(str_number)
+#     armstrong_num = 0
 
-    for num in str_number:
-        armstrong_num += int(num) ** len_number
-    return "it is armstrong number " if armstrong_num == number else "it is not a armstrong number"
+#     for num in str_number:
+#         armstrong_num += int(num) ** len_number
+#     return "it is armstrong number " if armstrong_num == number else "it is not a armstrong number"
 
-number = int(input("Please enter a number: "))
-print(armstrong_num(number))
+# number = int(input("Please enter a number: "))
+# print(armstrong_num(number))
+
+def flatten_list(nested_list):
+    flatten = []
+    for element in nested_list:
+        if type(element) == list:
+            for sub_element in element:
+                flatten.append(sub_element)
+        else:
+            flatten.append(element)
+    return flatten
+
+flat_list = [[2,3], [4,6], [5]]
+print(flatten_list(flat_list))
