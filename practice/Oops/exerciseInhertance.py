@@ -137,18 +137,18 @@
 # 🔴 Inherit a class Developer that adds a programming_language field.
 # '''
 
-# class Employee:
-#     def __init__(self, name, salary):
-#         self.name = name
-#         self.salary = salary
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
     
-# class Developer(Employee):
-#     def __init__(self, name, salary, programming_field):
-#         super().__init__(name, salary)
-#         self.programming_field = programming_field
+class Developer(Employee):
+    def __init__(self, name, salary, programming_field):
+        super().__init__(name, salary)
+        self.programming_field = programming_field
 
-# p1 = Developer("Rittick", 349000, "ABAP Developer")
-# print(p1.programming_field)
+p1 = Developer("Rittick", 349000, "ABAP Developer")
+print(p1.programming_field)
 
 # '''
 # 🔴 Create class Animal and class Dog inheriting from Animal. 
