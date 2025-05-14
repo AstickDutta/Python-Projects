@@ -90,16 +90,16 @@
 # 🔴 Add a method to calculate area.
 # '''
 
-# class Rectangle:
-#     def __init__(self, length, breadth):
-#         self.length = length
-#         self.breadth = breadth
+class Rectangle:
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
 
-#     def calculate(self):
-#         print(f"{self.length * self.breadth }")
+    def calculate(self):
+        print(f"{self.length * self.breadth }")
 
-# printObj = Rectangle(3,4)
-# printObj.calculate()
+printObj = Rectangle(3,4)
+printObj.calculate()
 
 
 # '''
