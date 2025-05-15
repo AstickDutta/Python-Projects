@@ -1189,15 +1189,37 @@ longest word in a sentence..!!
 # number = int(input("Please enter a number: "))
 # print(armstrong_num(number))
 
-def flatten_list(nested_list):
-    flatten = []
-    for element in nested_list:
-        if type(element) == list:
-            for sub_element in element:
-                flatten.append(sub_element)
-        else:
-            flatten.append(element)
-    return flatten
+# def flatten_list(nested_list):
+#     flatten = []
+#     for element in nested_list:
+#         if type(element) == list:
+#             for sub_element in element:
+#                 flatten.append(sub_element)
+#         else:
+#             flatten.append(element)
+#     return flatten
 
-flat_list = [[2,3], [4,6], [5]]
-print(flatten_list(flat_list))
+# flat_list = [[2,3], [4,6], [5]]
+# print(flatten_list(flat_list))
+
+
+def is_sublist(list1, list2):
+    len_list1 = len(list1)
+    len_list2 = len(list2)
+
+    if len_list2 > len_list1:
+        return False
+
+    for i in range(len_list1 - len_list2 + 1):
+        is_match = True
+        for j in range(len_list2):
+            if list1[i + j] != list2[j]:
+                is_match = False
+                break
+        if is_match:
+            return True
+    return False
+
+list1 = [1, 2, 3, 4]
+list2 = [2, 3]
+print(is_sublist(list1, list2))
