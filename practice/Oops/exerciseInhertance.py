@@ -393,22 +393,22 @@ Example Problem:
 #     def apply_discount(self, total):
 #         return max(0, total - self.amount)
     
-# class Cart:
-#     def __init__(self):
-#         self.items = []
-#         self.discount = None
+class Cart:
+    def __init__(self):
+        self.items = []
+        self.discount = None
 
-#     def add_items(self, item):
-#         self.items.append(item)
+    def add_items(self, item):
+        self.items.append(item)
 
-#     def set_discount(self ,discount):
-#         self.discount = discount
+    def set_discount(self ,discount):
+        self.discount = discount
 
-#     def calculate_total(self):
-#         total = sum(item.get_price() for item in self.items)
-#         if self.discount:
-#             total = self.discount.apply_discount(total)
-#         return total
+    def calculate_total(self):
+        total = sum(item.get_price() for item in self.items)
+        if self.discount:
+            total = self.discount.apply_discount(total)
+        return total
     
 
 
