@@ -1224,3 +1224,14 @@ list1 = [1, 2, 3, 4]
 list2 = [2, 3]
 print(is_sublist(list1, list2))
 
+
+def pattern_serise():
+    letter = 65
+    for row in range(5):
+        for col in range(5):
+            if letter <= 90:
+                print(chr(letter), end=" ")
+                letter += 1
+        print()
+
+pattern_serise()
