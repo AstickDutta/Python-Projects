@@ -1203,35 +1203,71 @@ longest word in a sentence..!!
 # print(flatten_list(flat_list))
 
 
-def is_sublist(list1, list2):
-    len_list1 = len(list1)
-    len_list2 = len(list2)
+# def is_sublist(list1, list2):
+#     len_list1 = len(list1)
+#     len_list2 = len(list2)
 
-    if len_list2 > len_list1:
-        return False
+#     if len_list2 > len_list1:
+#         return False
 
-    for i in range(len_list1 - len_list2 + 1):
-        is_match = True
-        for j in range(len_list2):
-            if list1[i + j] != list2[j]:
-                is_match = False
-                break
-        if is_match:
-            return True
-    return False
+#     for i in range(len_list1 - len_list2 + 1):
+#         is_match = True
+#         for j in range(len_list2):
+#             if list1[i + j] != list2[j]:
+#                 is_match = False
+#                 break
+#         if is_match:
+#             return True
+#     return False
 
-list1 = [1, 2, 3, 4]
-list2 = [2, 3]
-print(is_sublist(list1, list2))
+# list1 = [1, 2, 3, 4]
+# list2 = [2, 3]
+# print(is_sublist(list1, list2))
 
 
-def pattern_serise():
-    letter = 65
-    for row in range(5):
-        for col in range(5):
-            if letter <= 90:
-                print(chr(letter), end=" ")
-                letter += 1
-        print()
+# def pattern_series():
+#     letter = 65
+#     for row in range(5):
+#         for col in range(5):
+#             if letter <= 90:
+#                 print(chr(letter), end=" ")
+#                 letter += 1
+#         print()
 
-pattern_serise()
+# pattern_series()
+
+"""
+Create a class Rectangle with methods to calculate area and perimeter. Inherit it in a Square class.
+"""
+
+class Rectangle:
+    def __init__(self, width, length):
+        self.width = width
+        self.length = length
+
+    def area(self):
+        return f"Rectangle area : {self.length * self.width}"
+    
+    def perimeter(self):
+        return f"Rectangle perimeter { 2 * (self.length + self.width) }"
+    
+class Square(Rectangle):
+    def __init__(self, side):
+        super().__init__(side, side)
+
+try:
+    width = int(input("Please Enter width here: "))
+    length = int(input("Please Enter length here: "))
+
+    calculate = Rectangle(width, length)
+    print(calculate.area())
+    print(calculate.perimeter())
+
+    side = int(input("Please enter square side length: "))
+    
+    calculate_Square = Square(side)
+    print(calculate_Square.area())
+    print(calculate_Square.perimeter())
+
+except ValueError:
+    print("Please put numeric values here")
