@@ -1307,22 +1307,47 @@ electrical_obj = ElectricCar("Lamborghini", "Aviator", 1900, 899000 )
 print(electrical_obj.electric_car_details())
 
 
+# class PrimeChecker:
+#     def __init__(self, number):
+#         self.number = number
+
+#     def is_prime(self):
+#         if self.number < 2:
+#             return f"Given number {self.number} is not prime number"
+        
+#         for num in range(2, int(self.number ** 0.5) + 1):
+#             if self.number % num == 0:
+#                 return f"Given number {self.number} is not a prime"
+#         return f"Given number {self.number} is a prime number"
+    
+#     def __str__(self):
+#         return self.is_prime()
+        
+# number = int(input("Please enter a number: "))
+# ojb1 = PrimeChecker(number)
+# print(ojb1.is_prime())
+
+# * This class checks if a number is prime
 class PrimeChecker:
     def __init__(self, number):
-        self.number = number
+        self.number = number  # * Store the number to be checked
 
     def is_prime(self):
+        # ! Prime numbers are greater than 1
         if self.number < 2:
             return f"Given number {self.number} is not prime number"
         
+        # * Only check up to the square root of the number
         for num in range(2, int(self.number ** 0.5) + 1):
             if self.number % num == 0:
+                # ! Number is divisible by another number, so it's not prime
                 return f"Given number {self.number} is not a prime"
+        
+        # * If no divisors found, it's a prime number
         return f"Given number {self.number} is a prime number"
     
-    def __str__(self):
-        return self.is_prime()
         
+# TODO: Add input validation in the future
 number = int(input("Please enter a number: "))
-ojb1 = PrimeChecker(number)
-print(ojb1.is_prime())
+obj1 = PrimeChecker(number)  # * Create object of PrimeChecker class
+print(obj1.is_prime())  # * Print the result
