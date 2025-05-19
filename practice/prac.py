@@ -1305,3 +1305,24 @@ print(car_obj.display_info())
 
 electrical_obj = ElectricCar("Lamborghini", "Aviator", 1900, 899000 )
 print(electrical_obj.electric_car_details())
+
+
+class PrimeChecker:
+    def __init__(self, number):
+        self.number = number
+
+    def is_prime(self):
+        if self.number < 2:
+            return f"Given number {self.number} is not prime number"
+        
+        for num in range(2, int(self.number ** 0.5) + 1):
+            if self.number % num == 0:
+                return f"Given number {self.number} is not a prime"
+        return f"Given number {self.number} is a prime number"
+    
+    def __str__(self):
+        return self.is_prime()
+        
+number = int(input("Please enter a number: "))
+ojb1 = PrimeChecker(number)
+print(ojb1.is_prime())
