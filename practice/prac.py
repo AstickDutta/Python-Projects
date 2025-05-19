@@ -1240,34 +1240,68 @@ longest word in a sentence..!!
 Create a class Rectangle with methods to calculate area and perimeter. Inherit it in a Square class.
 """
 
-class Rectangle:
-    def __init__(self, width, length):
-        self.width = width
-        self.length = length
+# class Rectangle:
+#     def __init__(self, width, length):
+#         self.width = width
+#         self.length = length
 
-    def area(self):
-        return f"Rectangle area : {self.length * self.width}"
+#     def area(self):
+#         return f"Rectangle area : {self.length * self.width}"
     
-    def perimeter(self):
-        return f"Rectangle perimeter { 2 * (self.length + self.width) }"
+#     def perimeter(self):
+#         return f"Rectangle perimeter { 2 * (self.length + self.width) }"
     
-class Square(Rectangle):
-    def __init__(self, side):
-        super().__init__(side, side)
+# class Square(Rectangle):
+#     def __init__(self, side):
+#         super().__init__(side, side)
 
-try:
-    width = int(input("Please Enter width here: "))
-    length = int(input("Please Enter length here: "))
+# try:
+#     width = int(input("Please Enter width here: "))
+#     length = int(input("Please Enter length here: "))
 
-    calculate = Rectangle(width, length)
-    print(calculate.area())
-    print(calculate.perimeter())
+#     if width < 0 or length < 0:
+#         raise ValueError("Rectangle dimension must be positive")
 
-    side = int(input("Please enter square side length: "))
+#     calculate = Rectangle(width, length)
+#     print(calculate.area())
+#     print(calculate.perimeter())
+
+#     side = int(input("Please enter square side length: "))
+#     if side <= 0:
+#         raise ValueError("Square side must be positive.")
     
-    calculate_Square = Square(side)
-    print(calculate_Square.area())
-    print(calculate_Square.perimeter())
+#     calculate_Square = Square(side)
+#     print(calculate_Square.area())
+#     print(calculate_Square.perimeter())
 
-except ValueError:
-    print("Please put numeric values here")
+# except ValueError:
+#     print("Please put numeric values here")
+
+
+"""
+Write a class Car with attributes make, model, and year. Add a method display_info(). Then create a subclass ElectricCar that adds a battery_size attribute.
+"""
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+    
+    def display_info(self):
+        return f"car make: {self.make}, car model: {self.model}, car year: {self.year}"
+    
+class ElectricCar(Car):
+    def __init__(self, make, model, year, battery_size):
+        super().__init__(make, model, year)
+        self.battery_size = battery_size
+    
+    def electric_car_details(self):
+        base_info = super().display_info()
+        return f"{base_info} and battery size for the electric car is {self.battery_size} kwh"
+    
+car_obj = Car("TATA", "Nexon", 1945)
+print(car_obj.display_info())
+
+electrical_obj = ElectricCar("Lamborghini", "Aviator", 1900, 899000 )
+print(electrical_obj.electric_car_details())
