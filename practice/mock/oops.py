@@ -1,5 +1,5 @@
 class Person:
-    person_count = 0  # Class-level attribute
+    person_count = 0
 
     def __init__(self, name, age, password):
         self.name = name
@@ -36,7 +36,7 @@ class Employee(Person):
         self._salary = salary  # Protected
 
     def get_details(self):
-        # Overridden method with more details
+        #! Overridden method with more details
         base_details = super().get_details()
         return f"{base_details}, Employee ID: {self.employee_id}, Salary: ${self._salary}"
 
@@ -50,7 +50,8 @@ class Employee(Person):
 
 # Demonstration
 
-# Creating Person instance
+# * Creating Person instance
+
 p1 = Person("Alice", 30, "alice_pass123")
 print(p1.get_details())
 print("Password (via property):", p1.password)
@@ -63,7 +64,8 @@ print("Password (via property):", p2.password)
 print("Is Adult:", Person.is_adult(p1._age))
 print("Total Persons:", Person.get_person_count())
 
-# Creating Employee instance
+# * Creating Employee instance
+
 e1 = Employee("Bob", 28, "bob_pass456", "EMP123", 50000)
 print(e1.get_details())
 print("Salary:", e1.get_salary())

@@ -1340,14 +1340,59 @@ class PrimeChecker:
         # * Only check up to the square root of the number
         for num in range(2, int(self.number ** 0.5) + 1):
             if self.number % num == 0:
-                # ! Number is divisible by another number, so it's not prime
+                #! Number is divisible by another number, so it's not prime
                 return f"Given number {self.number} is not a prime"
         
         # * If no divisors found, it's a prime number
         return f"Given number {self.number} is a prime number"
     
-        
 # TODO: Add input validation in the future
 number = int(input("Please enter a number: "))
 obj1 = PrimeChecker(number)  # * Create object of PrimeChecker class
 print(obj1.is_prime())  # * Print the result
+
+
+class Food:
+    category = "Edible Item"
+    def __init__(self, name, calories):
+        self.name = name
+        self.calories = calories
+
+    def create(self, name, calories):
+        self.name = name
+        self.calories = calories
+
+    def get(self):
+        return f"Food: {self.name}, Calories: {self.calories} kcal"
+
+    @classmethod
+    def class_meth(cls):
+        return f"Category: {cls.category}"
+
+    @staticmethod
+    def static_meth(x, y):
+        return f"Total calories in meal: {x + y} kcal"
+
+    @property
+    def prop_meth(self):
+        return f"{self.name.upper()} is a food item with {self.calories} kcal"
+
+    def instance_method(self):
+        return (f"Instance Variables : {self.name}, {self.calories} kcal\n"
+                f"Instance Method    : {self.get()}\n"
+                f"Class Variable     : {self.category}\n"
+                f"Class Method       : {self.class_meth()}\n"
+                f"Static Method      : {self.static_meth(150, 300)}\n"
+                f"Property Decorator : {self.prop_meth}")
+
+
+# @orange Creating object of Food class
+food1 = Food("Pasta", 350)
+
+# @pink Displaying all method outputs with one function
+print("\nFOOD:\n", food1.instance_method())
+
+# @sky You can also test static/class/property methods separately
+
+# @amber Sample test of static method
+print(Food.static_meth(100, 200))
