@@ -65,7 +65,6 @@ print("Is Adult:", Person.is_adult(p1._age))
 print("Total Persons:", Person.get_person_count())
 
 # * Creating Employee instance
-
 e1 = Employee("Bob", 28, "bob_pass456", "EMP123", 50000)
 print(e1.get_details())
 print("Salary:", e1.get_salary())
