@@ -130,88 +130,146 @@
 # print(obj2.get_details())
 # print(obj2._Car__increase_car_milage(60))
 
-class Vehicle:
-    vehicle_count = 0
+# class Vehicle:
+#     vehicle_count = 0
 
-    def __init__(self, brand, engine_type, chassis_number):
-        self.brand = brand
-        self._engine_type = engine_type
-        self.__chassis_number = chassis_number
-        Vehicle.vehicle_count += 1
+#     def __init__(self, brand, engine_type, chassis_number):
+#         self.brand = brand
+#         self._engine_type = engine_type
+#         self.__chassis_number = chassis_number
+#         Vehicle.vehicle_count += 1
 
-    def get_details(self):
-        return f"Vehicle details: Brand - {self.brand}, Engine Type - {self._engine_type}"
+#     def get_details(self):
+#         return f"Vehicle details: Brand - {self.brand}, Engine Type - {self._engine_type}"
 
-    def _get_protected_engine_details(self, message):
-        return f"Engine Type: {self._engine_type}. Note: {message}"
+#     def _get_protected_engine_details(self, message):
+#         return f"Engine Type: {self._engine_type}. Note: {message}"
 
-    def __get_private_chassis(self):
-        return f"Chassis Number (Private): {self.__chassis_number}"
+#     def __get_private_chassis(self):
+#         return f"Chassis Number (Private): {self.__chassis_number}"
 
-    @classmethod
-    def get_vehicle_count(cls):
-        return f"Total Vehicles: {cls.vehicle_count}"
+#     @classmethod
+#     def get_vehicle_count(cls):
+#         return f"Total Vehicles: {cls.vehicle_count}"
 
-    @staticmethod
-    def is_electric(engine_type):
-        return engine_type.lower() == "electric"
+#     @staticmethod
+#     def is_electric(engine_type):
+#         return engine_type.lower() == "electric"
 
-    @property
-    def chassis_number(self):
-        return self.__chassis_number
+#     @property
+#     def chassis_number(self):
+#         return self.__chassis_number
 
 
-class Car(Vehicle):
-    def __init__(self, brand, engine_type, chassis_number, mileage, model):
-        super().__init__(brand, engine_type, chassis_number)
-        self._mileage = mileage
-        self.model = model
+# class Car(Vehicle):
+#     def __init__(self, brand, engine_type, chassis_number, mileage, model):
+#         super().__init__(brand, engine_type, chassis_number)
+#         self._mileage = mileage
+#         self.model = model
 
-    def get_details(self):
-        parent_details = super().get_details()
-        return f"{parent_details}, Model - {self.model}, Mileage - {self._mileage} km/l"
+#     def get_details(self):
+#         parent_details = super().get_details()
+#         return f"{parent_details}, Model - {self.model}, Mileage - {self._mileage} km/l"
 
-    def get_mileage(self):
-        return f"Current mileage: {self._mileage} km/l"
+#     def get_mileage(self):
+#         return f"Current mileage: {self._mileage} km/l"
 
-    def _increase_mileage(self, additional_mileage):
-        self._mileage += additional_mileage
-        return f"Updated mileage: {self._mileage} km/l"
+#     def _increase_mileage(self, additional_mileage):
+#         self._mileage += additional_mileage
+#         return f"Updated mileage: {self._mileage} km/l"
 
-#* Create Vehicle objects
-v1 = Vehicle("Tesla", "Electric", "EV123")
-v2 = Vehicle("Toyota", "Petrol", "PT456")
+# #* Create Vehicle objects
+# v1 = Vehicle("Tesla", "Electric", "EV123")
+# v2 = Vehicle("Toyota", "Petrol", "PT456")
 
-#* Create Car objects
-c1 = Car("Honda", "Diesel", "DS789", 18, "Civic")
-c2 = Car("Hyundai", "Electric", "EV987", 20, "Kona")
+# #* Create Car objects
+# c1 = Car("Honda", "Diesel", "DS789", 18, "Civic")
+# c2 = Car("Hyundai", "Electric", "EV987", 20, "Kona")
 
-# @pink === DETAILS ===
-print("=== VEHICLE DETAILS ===")
-print(v1.get_details())
-print(v2.get_details())
+# # @pink === DETAILS ===
+# print("=== VEHICLE DETAILS ===")
+# print(v1.get_details())
+# print(v2.get_details())
 
-print("\n=== CAR DETAILS ===")
-print(c1.get_details())
-print(c2.get_details())
+# print("\n=== CAR DETAILS ===")
+# print(c1.get_details())
+# print(c2.get_details())
 
-# @pink === PROTECTED & PRIVATE METHODS ===
-print("\n=== PROTECTED & PRIVATE ACCESS ===")
-print(v1._get_protected_engine_details("Used in high-performance vehicles"))
-# Access chassis number using property
-print("Chassis Number of v1:", v1._Vehicle__chassis_number)
+# # @pink === PROTECTED & PRIVATE METHODS ===
+# print("\n=== PROTECTED & PRIVATE ACCESS ===")
+# print(v1._get_protected_engine_details("Used in high-performance vehicles"))
+# # Access chassis number using property
+# print("Chassis Number of v1:", v1._Vehicle__get_private_chassis())
 
-# @pink === MILEAGE METHODS ===
-print("\n=== MILEAGE DEMO ===")
-print(c1.get_mileage())
-print(c1._increase_mileage(2))
-print(c1.get_mileage())
+# # @pink === MILEAGE METHODS ===
+# print("\n=== MILEAGE DEMO ===")
+# print(c1.get_mileage())
+# print(c1._increase_mileage(2))
+# print(c1.get_mileage())
 
-#@pink === CLASS METHOD ===
-print("\n=== VEHICLE COUNT ===")
-print(Vehicle.get_vehicle_count())
+# #@pink === CLASS METHOD ===
+# print("\n=== VEHICLE COUNT ===")
+# print(Vehicle.get_vehicle_count())
 
-#@pink === STATIC METHOD ===
-print("\n=== ELECTRIC CHECK ===")
-print("Is v1 electric?", Vehicle.is_electric(v1._engine_type))
-print("Is c2 electric?", Vehicle.is_electric(c2._engine_type))
+# #@pink === STATIC METHOD ===
+# print("\n=== ELECTRIC CHECK ===")
+# # print("Is v1 electric?", Vehicle.is_electric(v1._engine_type))
+# # print("Is c2 electric?", Vehicle.is_electric(c2._engine_type))
+# print("Is v2 electric?", v2.is_electric("petrol"))
+
+# class BankAccount:
+#     def __init__(self, owner, balance=0):
+#         self.owner = owner
+#         self.__balance = balance
+    
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self.__balance += amount
+#             return True
+#         return False
+    
+#     def withdraw(self, amount):
+#         if 0 < amount <= self.__balance:
+#             self.__balance -= amount
+#             return True
+#         return False
+    
+#     def get_balance(self):
+#         return self.__balance
+
+# obj1 = BankAccount("Astick", 0)
+# print(obj1.deposit(50000))
+# print(obj1.withdraw(400))
+# print(obj1.get_balance())
+
+
+# from abc import ABC, abstractmethod
+
+# class Car():
+#     @abstractmethod
+#     def get_car_details():
+#         pass
+# class Taxi(Car):
+#     def get_car_details(self):
+#         return f"Hi from child abstact"
+
+# obj1 = Car()
+# obj2 = Taxi()
+# print(obj2.get_car_details())
+
+
+my_dict = {"a": 1, "b": 2, "c": 3}
+value = my_dict.pop("b")  # Removes "b" and returns its value
+print(value)  # Output: 2
+print(my_dict)  # Output: {'a': 1, 'c': 3}
+
+print(my_dict.pop("x"))  # Raises KeyError because "x" is not in the dictionary
+
+
+my_dict = {"a": 1, "b": 2, "c": 3}
+item = my_dict.popitem()  # Removes the last inserted item
+print(item)  # Output: ('c', 3)
+print(my_dict)  # Output: {'a': 1, 'b': 2}
+
+# empty_dict = {}
+# empty_dict.popitem()  # Raises KeyError because the dictionary is empty

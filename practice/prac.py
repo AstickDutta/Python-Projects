@@ -1282,117 +1282,117 @@ Create a class Rectangle with methods to calculate area and perimeter. Inherit i
 Write a class Car with attributes make, model, and year. Add a method display_info(). Then create a subclass ElectricCar that adds a battery_size attribute.
 """
 
-class Car:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+# class Car:
+#     def __init__(self, make, model, year):
+#         self.make = make
+#         self.model = model
+#         self.year = year
     
-    def display_info(self):
-        return f"car make: {self.make}, car model: {self.model}, car year: {self.year}"
+#     def display_info(self):
+#         return f"car make: {self.make}, car model: {self.model}, car year: {self.year}"
     
-class ElectricCar(Car):
-    def __init__(self, make, model, year, battery_size):
-        super().__init__(make, model, year)
-        self.battery_size = battery_size
+# class ElectricCar(Car):
+#     def __init__(self, make, model, year, battery_size):
+#         super().__init__(make, model, year)
+#         self.battery_size = battery_size
     
-    def electric_car_details(self):
-        base_info = super().display_info()
-        return f"{base_info} and battery size for the electric car is {self.battery_size} kwh"
+#     def electric_car_details(self):
+#         base_info = super().display_info()
+#         return f"{base_info} and battery size for the electric car is {self.battery_size} kwh"
     
-car_obj = Car("TATA", "Nexon", 1945)
-print(car_obj.display_info())
+# car_obj = Car("TATA", "Nexon", 1945)
+# print(car_obj.display_info())
 
-electrical_obj = ElectricCar("Lamborghini", "Aviator", 1900, 899000 )
-print(electrical_obj.electric_car_details())
+# electrical_obj = ElectricCar("Lamborghini", "Aviator", 1900, 899000 )
+# print(electrical_obj.electric_car_details())
 
 
+# # class PrimeChecker:
+# #     def __init__(self, number):
+# #         self.number = number
+
+# #     def is_prime(self):
+# #         if self.number < 2:
+# #             return f"Given number {self.number} is not prime number"
+        
+# #         for num in range(2, int(self.number ** 0.5) + 1):
+# #             if self.number % num == 0:
+# #                 return f"Given number {self.number} is not a prime"
+# #         return f"Given number {self.number} is a prime number"
+    
+# #     def __str__(self):
+# #         return self.is_prime()
+        
+# # number = int(input("Please enter a number: "))
+# # ojb1 = PrimeChecker(number)
+# # print(ojb1.is_prime())
+
+# # * This class checks if a number is prime
 # class PrimeChecker:
 #     def __init__(self, number):
-#         self.number = number
+#         self.number = number  # * Store the number to be checked
 
 #     def is_prime(self):
+#         # ! Prime numbers are greater than 1
 #         if self.number < 2:
 #             return f"Given number {self.number} is not prime number"
         
+#         # * Only check up to the square root of the number
 #         for num in range(2, int(self.number ** 0.5) + 1):
 #             if self.number % num == 0:
+#                 #! Number is divisible by another number, so it's not prime
 #                 return f"Given number {self.number} is not a prime"
+        
+#         # * If no divisors found, it's a prime number
 #         return f"Given number {self.number} is a prime number"
     
-#     def __str__(self):
-#         return self.is_prime()
-        
+# # TODO: Add input validation in the future
 # number = int(input("Please enter a number: "))
-# ojb1 = PrimeChecker(number)
-# print(ojb1.is_prime())
-
-# * This class checks if a number is prime
-class PrimeChecker:
-    def __init__(self, number):
-        self.number = number  # * Store the number to be checked
-
-    def is_prime(self):
-        # ! Prime numbers are greater than 1
-        if self.number < 2:
-            return f"Given number {self.number} is not prime number"
-        
-        # * Only check up to the square root of the number
-        for num in range(2, int(self.number ** 0.5) + 1):
-            if self.number % num == 0:
-                #! Number is divisible by another number, so it's not prime
-                return f"Given number {self.number} is not a prime"
-        
-        # * If no divisors found, it's a prime number
-        return f"Given number {self.number} is a prime number"
-    
-# TODO: Add input validation in the future
-number = int(input("Please enter a number: "))
-obj1 = PrimeChecker(number)  # * Create object of PrimeChecker class
-print(obj1.is_prime())  # * Print the result
+# obj1 = PrimeChecker(number)  # * Create object of PrimeChecker class
+# print(obj1.is_prime())  # * Print the result
 
 
-class Food:
-    category = "Edible Item"
-    def __init__(self, name, calories):
-        self.name = name
-        self.calories = calories
+# class Food:
+#     category = "Edible Item"
+#     def __init__(self, name, calories):
+#         self.name = name
+#         self.calories = calories
 
-    def create(self, name, calories):
-        self.name = name
-        self.calories = calories
+#     def create(self, name, calories):
+#         self.name = name
+#         self.calories = calories
 
-    def get(self):
-        return f"Food: {self.name}, Calories: {self.calories} kcal"
+#     def get(self):
+#         return f"Food: {self.name}, Calories: {self.calories} kcal"
 
-    @classmethod
-    def class_meth(cls):
-        return f"Category: {cls.category}"
+#     @classmethod
+#     def class_meth(cls):
+#         return f"Category: {cls.category}"
 
-    @staticmethod
-    def static_meth(x, y):
-        return f"Total calories in meal: {x + y} kcal"
+#     @staticmethod
+#     def static_meth(x, y):
+#         return f"Total calories in meal: {x + y} kcal"
 
-    @property
-    def prop_meth(self):
-        return f"{self.name.upper()} is a food item with {self.calories} kcal"
+#     @property
+#     def prop_meth(self):
+#         return f"{self.name.upper()} is a food item with {self.calories} kcal"
 
-    def instance_method(self):
-        return (f"Instance Variables : {self.name}, {self.calories} kcal\n"
-                f"Instance Method    : {self.get()}\n"
-                f"Class Variable     : {self.category}\n"
-                f"Class Method       : {self.class_meth()}\n"
-                f"Static Method      : {self.static_meth(150, 300)}\n"
-                f"Property Decorator : {self.prop_meth}")
+#     def instance_method(self):
+#         return (f"Instance Variables : {self.name}, {self.calories} kcal\n"
+#                 f"Instance Method    : {self.get()}\n"
+#                 f"Class Variable     : {self.category}\n"
+#                 f"Class Method       : {self.class_meth()}\n"
+#                 f"Static Method      : {self.static_meth(150, 300)}\n"
+#                 f"Property Decorator : {self.prop_meth}")
 
 
-# @orange Creating object of Food class
-food1 = Food("Pasta", 350)
+# # @orange Creating object of Food class
+# food1 = Food("Pasta", 350)
 
-# @pink Displaying all method outputs with one function
-print("\nFOOD:\n", food1.instance_method())
+# # @pink Displaying all method outputs with one function
+# print("\nFOOD:\n", food1.instance_method())
 
-# @sky You can also test static/class/property methods separately
+# # @sky You can also test static/class/property methods separately
 
-# @amber Sample test of static method
-print(Food.static_meth(100, 200))
+# # @amber Sample test of static method
+# print(Food.static_meth(100, 200))
