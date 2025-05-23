@@ -1396,3 +1396,32 @@ Write a class Car with attributes make, model, and year. Add a method display_in
 
 # # @amber Sample test of static method
 # print(Food.static_meth(100, 200))
+
+
+"""
+Create a class Calculator that uses operator overloading to add and subtract two objects that hold numbers.
+"""
+
+class Calculator:
+    def __init__(self, first_number, second_number):
+        self.first_number = first_number
+        self.second_number = second_number
+    
+    def __add__(self, other):
+        return Calculator(self.first_number + other.first_number, self.second_number + other.second_number)
+    
+    def __sub__(self, other):
+        return Calculator(self.first_number - other.second_number, self.second_number - other.second_number)
+    
+    
+    def __str__(self):
+        return f"Numbers are: {self.first_number} and {self.second_number}"
+
+obj1 = Calculator(3, 5)
+obj2 = Calculator(5, 2)
+
+result_add = obj1 + obj2
+result_sub = obj1 - obj2
+
+print(result_add)
+print(result_sub)
