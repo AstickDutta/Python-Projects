@@ -1402,26 +1402,60 @@ Write a class Car with attributes make, model, and year. Add a method display_in
 Create a class Calculator that uses operator overloading to add and subtract two objects that hold numbers.
 """
 
-class Calculator:
-    def __init__(self, first_number, second_number):
-        self.first_number = first_number
-        self.second_number = second_number
+# class Calculator:
+#     def __init__(self, first_number, second_number):
+#         self.first_number = first_number
+#         self.second_number = second_number
     
-    def __add__(self, other):
-        return Calculator(self.first_number + other.first_number, self.second_number + other.second_number)
+#     def __add__(self, other):
+#         return Calculator(self.first_number + other.first_number, self.second_number + other.second_number)
     
-    def __sub__(self, other):
-        return Calculator(self.first_number - other.second_number, self.second_number - other.second_number)
+#     def __sub__(self, other):
+#         return Calculator(self.first_number - other.second_number, self.second_number - other.second_number)
     
     
-    def __str__(self):
-        return f"Numbers are: {self.first_number} and {self.second_number}"
+#     def __str__(self):
+#         return f"Numbers are: {self.first_number} and {self.second_number}"
 
-obj1 = Calculator(3, 5)
-obj2 = Calculator(5, 2)
+# obj1 = Calculator(3, 5)
+# obj2 = Calculator(5, 2)
 
-result_add = obj1 + obj2
-result_sub = obj1 - obj2
+# result_add = obj1 + obj2
+# result_sub = obj1 - obj2
 
-print(result_add)
-print(result_sub)
+# print(result_add)
+# print(result_sub)
+
+
+def replace_num(nums):
+    for sublist in range(len(nums)):
+        for items in range(len(nums[sublist])):
+            if nums[sublist][items] == 5:
+                nums[sublist][items] = 2
+    return nums
+
+nums = [[12,4,5], [5,7,4],[8,5,9]]
+print(replace_num(nums))
+
+
+def replace_str(nums):
+    for sublist in range(len(nums)):
+        for items in range(len(nums[sublist])):
+            if nums[sublist][items] % 2 == 0:
+                nums[sublist][items] = "Even"
+    return nums
+
+nums = [[12,4,5], [5,7,4],[8,5,9]]
+print(replace_str(nums))
+
+
+def value_appear_count(nums):
+    count = 0
+    for sublist in nums:
+        for item in sublist:
+            if item == 3:
+                count += 1
+    return count
+
+nums = [[3,4,5], [5,4,3], [4,66,2]]
+print(value_appear_count(nums))
