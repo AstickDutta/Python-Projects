@@ -1427,35 +1427,110 @@ Create a class Calculator that uses operator overloading to add and subtract two
 # print(result_sub)
 
 
-def replace_num(nums):
-    for sublist in range(len(nums)):
-        for items in range(len(nums[sublist])):
-            if nums[sublist][items] == 5:
-                nums[sublist][items] = 2
-    return nums
+# def replace_num(nums):
+#     for sublist in range(len(nums)):
+#         if type(nums[sublist]) == list:
+#             for items in range(len(nums[sublist])):
+#                 if nums[sublist][items] == 4:
+#                     nums[sublist][items] = 2
+#         elif nums[sublist] == 4:
+#             nums[sublist] = 2
+#     return nums
 
-nums = [[12,4,5], [5,7,4],[8,5,9]]
-print(replace_num(nums))
+# nums = [1,2,3,[4,3,7],[8,6,4],4,3]
+# print(replace_num(nums))
+
+# nums = [[12,4,5], [5,7,4],[8,5,9]]
+# # print(nums[])
+
+# li = [1,2,3,[4,3,7],[8,6,4],4,3]
+
+# def replace_str(nums):
+#     for sublist in range(len(nums)):
+#         for items in range(len(nums[sublist])):
+#             if nums[sublist][items] % 2 == 0:
+#                 nums[sublist][items] = "Even"
+#     return nums
+
+# nums = [[12,4,5], [5,7,4],[8,5,9]]
+# print(replace_str(nums))
 
 
-def replace_str(nums):
-    for sublist in range(len(nums)):
-        for items in range(len(nums[sublist])):
-            if nums[sublist][items] % 2 == 0:
-                nums[sublist][items] = "Even"
-    return nums
+# def value_appear_count(nums):
+#     count = 0
+#     for sublist in nums:
+#         for item in sublist:
+#             if item == 3:
+#                 count += 1
+#     return count
 
-nums = [[12,4,5], [5,7,4],[8,5,9]]
-print(replace_str(nums))
+# nums = [[ 3, 4, 5 ], [ 5, 4, 3 ], [ 4, 66, 2 ]]
+# print(value_appear_count(nums))
+
+# def max_value(nums):
+#     max_value = nums[0]
+#     for item in nums:
+#         if item > max_value:
+#             max_value = item
+#     return f"max value from given list is {max_value}"
+
+# nums = [4,3,6,7,9,45,34,23]
+# print(max_value(nums))
+
+# def small_value(nums):
+#     small_value = nums[0]
+#     for item in nums:
+#         if item < small_value:
+#             small_value = item
+#     return f"smallest value from list is {small_value}"
+
+# nums = [ 4, 5, 6, 3, 22 ]
+# print(small_value(nums))
+
+# def unique_value(nums):
+#     new_nums = []
+#     for item in nums:
+#         if item not in new_nums:
+#             new_nums.append(item)
+#     return new_nums
+
+# nums =  [ 4, 5, 6, 3, 22, 4, 22 ]
+# print(unique_value(nums))
+
+#! [1,2,3,4,5]
+#* [3,4,5,1,2]
+#@pink [4,5,1,2,3]
+
+#145 10
+
+# li = [1,2,3,[4,3,7],[8,6,4],4,3]
+# li [4][2] = 2
+# print(li)
+
+# * input = [1,[2,[3,[4,[5,[6]]]]]]
+# !output is [1,2,3,4,5,6]
+
+# def flattern_list(list1):
+#     result = []
+#     for item in list1:
+#         if type(item) == list:
+#             result.extend(flattern_list(item))
+#         else:
+#             result.append(item)
+#     return result
+
+# list1 = [1,[2,[3,[4,[5,[6]]]]]]
+# print(flattern_list(list1))
 
 
-def value_appear_count(nums):
-    count = 0
-    for sublist in nums:
-        for item in sublist:
-            if item == 3:
-                count += 1
-    return count
+def flatten_list(list1):
+    result = []
+    for item in list1:
+        if type(item) == list:
+            result.extend(flatten_list(item))
+        else:
+            result.append(item)
+    return result
 
-nums = [[3,4,5], [5,4,3], [4,66,2]]
-print(value_appear_count(nums))
+list1 = [1,[2,[3,[4,[5]]],6]]
+print(flatten_list(list1))
